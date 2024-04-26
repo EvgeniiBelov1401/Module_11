@@ -1,4 +1,6 @@
-﻿namespace VoiceTexterBot
+﻿using Telegram.Bot.Polling;
+
+namespace VoiceTexterBot
 {
     internal class Program
     {
