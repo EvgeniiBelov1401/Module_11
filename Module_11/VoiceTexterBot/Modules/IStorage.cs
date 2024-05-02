@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace VoiceTexterBot.Modules
 {
-    internal class Session
+    internal interface IStorage
     {
-        public string LanguageCode { get; set; }
     }
 }
