@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VoiceTexterBot.Modules;
 
 namespace VoiceTexterBot.Services
 {
     internal interface IStorage
     {
+        /// <summary>
+        /// Получение сессии пользователя по идентификатору
+        /// </summary>
+        Session GetSession(long chatId);
     }
 }
