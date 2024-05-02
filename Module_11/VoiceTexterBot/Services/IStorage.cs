@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VoiceTexterBot.Modules
+namespace VoiceTexterBot.Services
 {
     internal interface IStorage
     {
