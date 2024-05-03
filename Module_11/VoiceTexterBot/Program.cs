@@ -55,6 +55,8 @@ namespace VoiceTexterBot
                 BotToken = "6777125585:AAEsltiy1v7CLEuV-rZ88x1scYojW9wps48",
                 AudioFileName = "audio",
                 InputAudioFormat = "ogg",
+                OutputAudioFormat = "wav", // Новое поле
+                InputAudioBitrate = 48000,
             };
         }
     }
