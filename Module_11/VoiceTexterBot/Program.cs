@@ -32,6 +32,8 @@ namespace VoiceTexterBot
             AppSettings appSettings = BuildAppSettings();
             services.AddSingleton(BuildAppSettings());
 
+            services.AddSingleton<IFileHandler, AudioFileHandler>();
+
             services.AddSingleton<IStorage, MemoryStorage>();
 
             services.AddTransient<DefaultMessageController>();
@@ -46,9 +48,13 @@ namespace VoiceTexterBot
         }
         static AppSettings BuildAppSettings()
         {
+
             return new AppSettings()
             {
-                BotToken = "6777125585:AAEsltiy1v7CLEuV-rZ88x1scYojW9wps48"
+                DownloadsFolder = @"C:\Users\evgen\Downloads",
+                BotToken = "6777125585:AAEsltiy1v7CLEuV-rZ88x1scYojW9wps48",
+                AudioFileName = "audio",
+                InputAudioFormat = "ogg",
             };
         }
     }
