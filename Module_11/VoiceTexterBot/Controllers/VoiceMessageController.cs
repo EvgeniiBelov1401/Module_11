@@ -30,11 +30,10 @@ namespace VoiceTexterBot.Controllers
                 return;
 
             await _audioFileHandler.Download(fileId, ct);
-            await _telegramClient.SendTextMessageAsync(message.Chat.Id, "Голосовое сообщение загружено", cancellationToken: ct);
 
             string userLanguageCode = _memoryStorage.GetSession(message.Chat.Id).LanguageCode; // Здесь получим язык из сессии пользователя
-            _audioFileHandler.Process(userLanguageCode); // Запустим обработку
-            await _telegramClient.SendTextMessageAsync(message.Chat.Id, "Голосовое сообщение конвертировано в формат .WAV", cancellationToken: ct);
+            var result = _audioFileHandler.Process(userLanguageCode); // Запустим обработку
+            await _telegramClient.SendTextMessageAsync(message.Chat.Id, result, cancellationToken: ct);
         }
     }
 }

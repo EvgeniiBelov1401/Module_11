@@ -26,6 +26,6 @@ namespace VoiceTexterBot.Configuration
         /// </summary>
         public string InputAudioFormat { get; set; }
         public string OutputAudioFormat { get; set; }
-        public int InputAudioBitrate { get; set; }
+        public float InputAudioBitrate { get; set; }
     }
 }
